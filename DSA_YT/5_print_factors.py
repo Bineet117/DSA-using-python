@@ -13,3 +13,24 @@ while i <= 15:
     if n % i == 0:
         print(i)
     i += 1
+
+
+logger.info("Better solution:")
+n = 15
+fact = [] 
+for i in range(1,n//2):
+    '''
+    this code is only iterating half of the original num
+    '''
+    if n%i == 0:
+        print(i)
+        fact.append(i)
+print(n)
+fact.append(n)
+print(fact)
+
+
+logger.info("Optimal solution:")
+n = 15
+import math 
+print(int(math.sqrt(n)))
