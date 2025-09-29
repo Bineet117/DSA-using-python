@@ -1,7 +1,7 @@
 from logger_config import logger
 
 # this is for knowing the difference between parameterized and functional recursion 
-
+logger.info(50*"=")
 logger.info("parameterized Recursion")
 def sum_param(n, acc= 0):
     if n == 0:
@@ -11,7 +11,7 @@ def sum_param(n, acc= 0):
 
 print(sum_param(6))
 
-
+logger.info(50*"=")
 logger.info("Functional Recursion")
 # sum of n 
 def sum_func(n):
@@ -32,7 +32,7 @@ print(fact(3))
 # TC = O(n)
 # SC = O(n) stack space
 
-
+logger.info(50*"=")
 logger.info("reverse a list")
 # reverse a list 
 a = [1,2,3,4,5,6,7]
@@ -48,5 +48,22 @@ print(reverse(a))
 print(b)
 
 
+logger.info(50*"=")
+logger.info("reverse a list with the some specific element")
 
+lt = [1,2,3,4,5,6,7,8,9,10,12]
 
+fir_ind = 2
+ls_ind = 6
+
+def reverse_data(lt, fir_ind, ls_ind):
+    if fir_ind >= ls_ind:
+        return 
+    lt[fir_ind], lt[ls_ind] = lt[ls_ind], lt[fir_ind]
+    reverse_data(lt, fir_ind+1, ls_ind-1)
+
+reverse_data(lt, fir_ind, ls_ind)
+print(lt)
+
+# TC = O(ls_ind - fir_ind - 1)   
+# SC = O(ls_ind - fir_ind - 1)
