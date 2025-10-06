@@ -22,8 +22,6 @@ def merge_sorted_array(arr1 , arr2):
 
 # print(merge_sorted_array(a,b))
 
-
-
 def merge_sort(ar):
     if len(ar) == 1:
         return ar
