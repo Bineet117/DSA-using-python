@@ -44,3 +44,23 @@ def move_zeroes(data):
     return data
 
 print(move_zeroes(data))
+
+
+logger.debug("===========================")
+logger.debug("===========================")
+logger.debug("===========================")
+logger.debug("===========================")
+logger.debug("===========================")
+
+logger.info("Return the index of the data and if it is not in the list then return -1 (if the number is repeated then return only the first index of hte element )")
+def fetch_index(data , ele):
+    for i in range(len(data)):
+        if data[i] == ele:
+            return i
+    return -1
+
+    
+print(fetch_index([1,2,4,5,6,1,5], 1))
+        
+        
+        
